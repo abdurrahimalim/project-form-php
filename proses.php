@@ -1,12 +1,19 @@
 <?php
 require_once 'Person.php';
 
-//ambil data jadi array
+function prosesForm($data) {
+    $firstname = trim($data['firstname']);
+    $lastname = trim($data['lastname']);
+    $phone = trim($data['phone']);
+    $address = trim($data['address']);
+
+    return new Person(
+        $firstname,
+        $lastname,
+        $phone,
+        $address
+    );
+}
 $data = $_POST;
-$person = new Person(
-    $data['firstname'],
-    $data['lastname'],
-    $data['phone'],
-    $data['address']
-);
+$person = prosesForm($data);
 ?>
