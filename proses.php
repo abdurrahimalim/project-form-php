@@ -7,6 +7,6 @@ $person = new Person(
     $data['firstname'],
     $data['lastname'],
     $data['phone'],
-    $data['address'],
+    $data['address']
 );
 ?>
