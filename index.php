@@ -24,7 +24,15 @@
 
         <button type='submit' name='submit'>Submit</button>
     </form>
-     
+
+     <?php
+    if (isset($_POST['submit'])) {
+        require_once 'proses.php';
+        $hasil = prosesForm($_POST);
+        require_once 'hasil.php';
+        tampilHasil($hasil);
+    }
+    ?>
 
 </div>
 </body>
