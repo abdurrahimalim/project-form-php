@@ -18,9 +18,7 @@
         <input type='text' name='phone' placeholder='Phone Number'
                value='<?= isset($_POST["phone"]) ? htmlspecialchars($_POST["phone"]) : "" ?>'>
 
-        <textarea name='address' placeholder='Address'>
-            <?= isset($_POST['address']) ? htmlspecialchars($_POST['address']) : '' ?>
-        </textarea>
+        <textarea name='address' placeholder='Address'><?= isset($_POST['address']) ? htmlspecialchars($_POST['address']) : '' ?></textarea>
 
         <button type='submit' name='submit'>Submit</button>
     </form>
